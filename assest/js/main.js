@@ -11,13 +11,17 @@ const showMorebtn = $(".nav-home__item--more");
 const showMoretext = $(".nav-home__item--more > span");
 const showIcon = $$(".nav-home__item--more > .nav-home__item-icon");
 const iconMenu = $('.star-menu')
-console.log(showMoretext);
+
+
+
 
 const App = {
+    isMouseOver : true,
     videos: [
         {
             videoLink: "./Video-list/video-01.html",
-            videoImg: "./assest/img/img1.webp",
+            videoImg: "./assest/img/img1-1.webp",
+            videoImg2: "./assest/img/img1.webp",
             duration: "04:37",
             avatar: "./assest/img/avataChanel1.jpg",
             videoName: "Tình Yêu Màu Hồng (Lofi Ver.) - Hồ Văn Quý x Xám x Freak D",
@@ -189,7 +193,7 @@ const App = {
             <div class="video-item">
                 <a href='${video.videoLink}'>
                     <div class="video-item__img">
-                        <img src='${video.videoImg}' alt="">
+                        <img src='${video.videoImg}' data-index='${index}' alt="">
                         <div class="video-play">
                             <div class="video-play__later">
                                 <i class="far fa-clock"></i>
@@ -251,12 +255,14 @@ const App = {
             });
         };
         // onmouse icon
-        iconMenu.onmousedown = function(){
+        iconMenu.onmousedown = function () {
             iconMenu.classList.add("icon--active");
-        }
-        iconMenu.onmouseup = function(){
+        };
+        iconMenu.onmouseup = function () {
             iconMenu.classList.remove("icon--active");
-        }
+        };
+        // Video change
+    
     },
 
     render() {

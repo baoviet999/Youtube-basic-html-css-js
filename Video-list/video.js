@@ -15,6 +15,12 @@ const showNavList = $(".nav-home--showmore");
 const showMorebtn = $(".nav-home__item--more");
 const showMoretext = $(".nav-home__item--more > span");
 const showIcon = $$(".nav-home__item--more > .nav-home__item-icon");
+const showLyric = $(".video-section__desc--showmore");
+const showLyricbtn = $(".video-section__desc-showmore");
+const showLyricSpan = $(".video-section__desc-showmore span");
+const commentBtn = $(".people__comment-showmore");
+const commentShow = $(".people__comment--hide-wrap");
+
 console.log(likeBtn);
 
 const App = {
@@ -209,6 +215,7 @@ const App = {
         navVideo.innerHTML = html.join("");
     },
     isLike: false,
+    isShown : false,
     handleEvent() {
         //like button
         likeBtn.onclick = () => {
@@ -263,6 +270,21 @@ const App = {
                 ? (submitCm.style = "color : #fff; background-color :  #065FD4")
                 : (submitCm.style = "color : var(--text-color)");
         };
+        
+        //show lyrics b
+        showLyricbtn.onclick = () => {
+            showLyric.classList.toggle("active")
+            this.isShown = !this.isShown;
+            if (this.isShown) {
+                showLyricSpan.innerText = "Ẩn bớt";
+            } else {
+                showLyricSpan.innerText = "Hiện thêm";
+            }
+        }
+        //Comment
+        commentBtn.onclick = () =>{
+            commentShow.classList.toggle('active')
+        }
     },
 
     render() {

@@ -1,20 +1,39 @@
 /* tablet mobie */
-@media (max-width:1023px){
-    .hide-on-mobile-tablet{
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
         display: none;
+    }
+    .body-offset-width {
+        margin-left: 0;
+    }
+    .content-category {
+        overflow: hidden;
+    }
+    .video-wrap {
+        width: 100%;
+        height: 200vh;
+        padding: 80px 15px !important;
     }
 }
 /* Mobile */
-@media(max-width: 739px){
-    .hide-on-mobile{
+@media (max-width: 739px) {
+    .hide-on-mobile {
         display: none;
     }
-    
 }
 /* Tablet */
-@media (min-width : 740px) and (max-width : 1023px){
-    .hide-on-tablet{
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
         display: none;
     }
-   
+    iframe {
+        height: 430px;
+    }
+    .video-section__item-img {
+        width: 40%;
+        height: 155px;
+    }
+    .side-bar__menu{
+        width: 35% !important;
+    }
 }
